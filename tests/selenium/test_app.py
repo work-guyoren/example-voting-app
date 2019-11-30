@@ -32,8 +32,8 @@ def browser():
 
 def test_confirm_vote_title(browser):
     browser.get("http://{}:80".format(vote_endpoint_ip))
-    option_a = "Codefresh"
-    option_b = "Other"
+    option_a = "The Unicorn"
+    option_b = "Young Sheldon"
     assert "{} vs {}!".format(option_a, option_b) in browser.title
 
 def test_confirm_vote_choice_form(browser):
@@ -62,7 +62,7 @@ def test_vote_click(browser):
 
 def test_confirm_result_title(browser):
     browser.get("http://{}:80".format(result_endpoint_ip))
-    assert "Cats vs Dogs -- Result" in browser.title
+    assert "The Unicorn vs Young Sheldon -- Result" in browser.title
 
 
 def test_confirm_result(browser):
